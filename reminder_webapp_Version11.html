@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Напоминание!</title>
+  <style>
+    body { display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; background: #f7f7f7; }
+    #bell { font-size: 100px; }
+    #sound-btn { padding: 20px 40px; font-size: 1.2em; margin-top: 30px; }
+    #desc { margin-top: 20px; font-size: 1.1em; }
+  </style>
+</head>
+<body>
+  <div id="bell">🔔</div>
+  <div id="desc">Сработало напоминание!</div>
+  <button id="sound-btn">Включить звонок</button>
+  <audio id="bell-audio" src="https://assets.mixkit.co/sfx/preview/mixkit-alarm-digital-clock-beep-989.mp3"></audio>
+  <script>
+    document.getElementById('sound-btn').onclick = function() {
+      document.getElementById('bell-audio').play();
+    };
+  </script>
+</body>
+</html>
